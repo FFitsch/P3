@@ -1,0 +1,58 @@
+\documentclass[titlepage]{article}
+\usepackage{fancyhdr}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{appendix}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+
+\usepackage[backend=biber,style=verbose-ibid,sorting=ynt]{biblatex}
+\addbibresource{K4.bib}
+
+\usepackage[breaklinks]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[tableposition=top, justification=centering]{caption}
+\renewcommand{\arraystretch}{2}
+
+\usepackage{derivative}
+
+\usepackage{array,tabularx,calc}
+\newlength{\conditionwd}
+\newenvironment{conditions}[1][where:]{
+        #1\tabularx{\linewidth-\widthof{#1}}[t]
+        {>{$}l<{$} @{${}={}$} X@{}}}
+  {\endtabularx\\[\belowdisplayskip]}
+
+
+% Title Page -----------------------------------------------------------
+\title{Protocol \\ Physikal.-chem. Praktikum 165.008 \\ P3 - Franck-Hertz Experiment}
+\author{Group F\\Jonas Adamer (12225913)\\Florian Fitsch (12218283)\\Leonhard Ritt (12208881)}
+\date{Date of experiment: 2024/10/28\\Date of submission:}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyfoot[L]{P3: Franck-Hertz Experiment}
+\fancyfoot[C]{Group F}
+\fancyfoot[R]{Adamer, Fitsch, Ritt}
+
+\begin{document}
+
+% TITLE PAGE
+\maketitle
+\thispagestyle{empty}
+
+% TABLE OF CONTENTS
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\addtocounter{page}{-1}
+
+\newpage
+\section{Objective}
+
+\end{document}
