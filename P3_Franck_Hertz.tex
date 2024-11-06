@@ -129,7 +129,7 @@ Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz cur
 %
 \noindent In order to be able to use the more precise VAR-values for further calculations, the reduction factor of the VAR-scaling has to be calculated. This is done by dividing a specific distance in CAL-mode from the equivalent distance in VAR-mode. For the purposes of this experiment, the distance in X-direction between the first and last peak is used.
 %
-\begin{equation}
+\begin{equation} \label{eq_reduction_factor}
     R = \frac{X_{cal,2} - X_{cal,1}}{X_{var,2} - X_{var,1}}
 \end{equation}
 \begin{conditions}
@@ -147,7 +147,7 @@ Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz cur
     X_{cal,n-1}, X_{cal,n} & X-coordinates of neighboring peaks or troughs in the VAR-Plot
 \end{conditions}
 
-\noindent This calculation was is done using all peak and trough pairs and its results are shown in Table \ref{tb_ne_excitation_energies}.
+\noindent This calculation was done using all peak and trough pairs and its results are shown in Table \ref{tb_ne_excitation_energies}.
 %
 \begin{table}[H]
     \centering
@@ -156,15 +156,21 @@ Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz cur
     \begin{tabular}{
       |>{\centering\arraybackslash}m{0.15\textwidth}
       |>{\centering\arraybackslash}m{0.15\textwidth}
-      |>{\centering\arraybackslash}m{0.15\textwidth}
-      |>{\centering\arraybackslash}m{0.15\textwidth}
-      |>{\centering\arraybackslash}m{0.15\textwidth}
       |}
         \hline
-         & \textbf{Peaks 1,2} & \textbf{Peaks 2,3} & \textbf{Troughs 1,2} & \textbf{Troughs 2,3}
+         & \textbf{\(\Delta\)E [eV]}
         \\
         \hline
-        \textbf{\(\Delta\)E [eV]} & 17.6 & 19.4 & 19.7 & 16.3
+        \textbf{Peaks 1,2} & 17.6
+        \\
+        \hline
+        \textbf{Peaks 2,3} & 19.4
+        \\
+        \hline
+        \textbf{Troughs 1,2} & 19.7
+        \\
+        \hline
+        \textbf{Troughs 2,3} & 16.3
         \\
         \hline
     \end{tabular}
@@ -216,5 +222,61 @@ Firstly, the uncertainty in voltage readings, resulting from the limited resolut
 \end{conditions}
 
 \noindent Using the equations above, the excitation energy of Neon \(\adif E_{Ne}\) is determined as \textbf{(18.26~\(\pm\)~1.01)~eV}.
+
+\newpage
+\subsection{Determination of Excitation Energy for Mercury}
+Figures \ref{fig_hg_150_CAL} through \ref{fig_hg_180_VAR} show the recorded Franck-Hertz curves of Mercury in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_hg_peaks_troughs}.
+\begin{table}[H]
+    \centering
+    \caption{X-values of measured peaks and throughs in the CAL- and VAR-mode Hg-plots at both 150~°C and 180~°C}
+    \label{tb_hg_peaks_troughs}
+    \begin{tabular}{
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |}
+        \hline
+         & \textbf{X-value CAL\newline 150~°C [mm]} & \textbf{X-value VAR\newline 150~°C [mm]} & \textbf{X-value CAL\newline 180~°C [mm]} & \textbf{X-value VAR\newline 180~°C [mm]}
+        \\
+        \hline
+        \textbf{Peak 1} & 4 & 22 & 6 & 48
+        \\
+        \hline
+        \textbf{Peak 2} & 8 & 59 & 11 & 86
+        \\
+        \hline
+        \textbf{Peak 3} & 13 & 100 & 16 & 125
+        \\
+        \hline
+        \textbf{Peak 4} & 19 & 141 & 21 & 163
+        \\
+        \hline
+        \textbf{Peak 5} & 24 & 184 & 27 & 204
+        \\
+        \hline
+        \textbf{Peak 6} & 30 & 233 & 32 & 243
+        \\
+        \hline
+        \textbf{Trough 1} & 6 & 46 & 8 & 61
+        \\
+        \hline
+        \textbf{Trough 2} & 11 & 84 & 13 & 101
+        \\
+        \hline
+        \textbf{Trough 3} & 16 & 123 & 18 & 141
+        \\
+        \hline
+        \textbf{Trough 4} & 21 & 163 & 23 & 181
+        \\
+        \hline
+        \textbf{Trough 5} & 26 & 204 & 28 & 221
+        \\
+        \hline
+    \end{tabular}
+\end{table}
+%
+\noindent Using Equation \ref{eq_reduction_factor}, reduction factors for both temperatures were calculated. For 150 and 180~°C, these are 0.1232 and 0.1333, respectively.
 
 \end{document}
