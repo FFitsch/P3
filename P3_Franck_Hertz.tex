@@ -15,7 +15,6 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[tableposition=top, justification=centering]{caption}
-\renewcommand{\arraystretch}{2}
 
 \usepackage{derivative}
 
@@ -54,5 +53,168 @@
 
 \newpage
 \section{Objective}
+In this assignment, the Franck-Hertz experiment is carried out using a Neon- as well as a Mercury-filled tube. While the Neon-tube is run at room temperature, the Mercury tube is run at Temperatures of 150 as well as 180~°C. The available experimental parameters (suction voltage as well as retarding voltage) are tuned in order to attain several clear maxima, before measurements are taken in order to determine the excitation energies of the studied elements.
+
+\section{Experiment}
+In order to start the experiment, the Neon-filled tube was connected to the Franck-Hertz control device. Using its various knobs, the voltages U\textsubscript{1} (suction current between cathode and first grid) and U\textsubscript{3} (retarding current between the anode and second grid) were set to the initial values presented in Table \ref{tb_operational_parameters}. These values were then tuned by setting the control device to quickly sweep the entire available range for U\textsubscript{2} (accelerating voltage between the two grids), in order to get clear and numerous peaks.
+%
+\begin{table}[H]
+  \centering
+  \caption{Initial and tuned operational values of the conducted Franck-Hertz experiments.}
+  \label{tb_operational_parameters}
+  \begin{tabular}{
+    |>{\centering\arraybackslash}m{0.08\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |}
+      \hline
+       & \textbf{Ne\newline initial} & \textbf{Ne\newline tuned} & \textbf{Hg, 150~°C\newline initial} & \textbf{Hg, 150~°C\newline tuned} & \textbf{Hg, 180~°C\newline initial} & \textbf{Hg, 180~°C\newline tuned}
+      \\
+      \hline
+      \textbf{U\textsubscript{1} [V]} & a & 0.54 & a & 5.00 & a & 5.31
+      \\
+      \hline
+      \textbf{U\textsubscript{3} [V]} & a & 8.98 & a & 4.08 & a & 0.68
+      \\
+      \hline
+  \end{tabular}
+\end{table}
+%
+\noindent After the ideal parameters were determined, an X/Y-plotter was connected to the control device, with U\textsubscript{2} recorded on the x-axis and the anode current being recorded on the y-axis. Measurements were then plotted to paper using the control device's sweep-function (sweeping over the available range of U\textsubscript{2} values), both in the plotter's CAL-mode, in which one unit on the paper corresponds to a fixed input current, as well as the VAR-mode, in which the was manually scaled to best fit the paper.
+
+Following the experiments using the Neon-tube, the Mercury-tube was connected instead and heated up by setting the desired temperature on the control device. The experimental steps described above were then repeated at tube temperatures of 150 and 180~°C.
+
+\newpage
+\section{Results and Discussion}
+\subsection{Determination of Excitation Energy for Neon}
+Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz curves of Neon in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_ne_peaks_troughs}.
+%
+\begin{table}[H]
+  \centering
+  \caption{X-values of measured peaks and throughs in the CAL- and VAR-mode Ne-plots}
+  \label{tb_ne_peaks_troughs}
+  \begin{tabular}{
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |>{\centering\arraybackslash}m{0.125\textwidth}
+    |}
+      \hline
+       & \textbf{X-value\newline CAL [mm]} & \textbf{X-value\newline VAR [mm]}
+      \\
+      \hline
+      \textbf{Peak 1} & 19 & 63
+      \\
+      \hline
+      \textbf{Peak 2} & 36 & 120
+      \\
+      \hline
+      \textbf{Peak 3} & 56 & 183
+      \\
+      \hline
+      \textbf{Trough 1} & 27 & 88
+      \\
+      \hline
+      \textbf{Trough 2} & 46 & 152
+      \\
+      \hline
+      \textbf{Trough 3} & 62 & 205
+      \\
+      \hline
+  \end{tabular}
+\end{table}
+%
+\noindent In order to be able to use the more precise VAR-values for further calculations, the reduction factor of the VAR-scaling has to be calculated. This is done by dividing a specific distance in CAL-mode from the equivalent distance in VAR-mode. For the purposes of this experiment, the distance in X-direction between the first and last peak is used.
+%
+\begin{equation}
+    R = \frac{X_{cal,2} - X_{cal,1}}{X_{var,2} - X_{var,1}}
+\end{equation}
+\begin{conditions}
+    R & Reduction factor \\
+    X_{cal,1}, X_{cal,2} & X-coordinates of specified points on the CAL-plot \\
+    X_{var,1}, X_{var,2} & X-coordinates of specified points on the VAR-plot
+\end{conditions}
+
+\noindent Using the values of Peaks 1 and 3 in Table \ref{tb_ne_peaks_troughs}, a reduction factor of 0.3083 is determined. Since, during the CAL-measurement, the X/Y-plotter was set to record one volt of input voltage as one millimeter on the paper, the distance of two neighboring peaks or troughs on the VAR-graph only needs to be multiplied with the reduction factor in order to calculate the excitation energy of the studied element in electron-volts (eV):
+%
+\begin{equation}
+    \adif E = (X_{var,n} - X_{var,n-1}) \cdot R
+\end{equation}
+\begin{conditions}
+    X_{cal,n-1}, X_{cal,n} & X-coordinates of neighboring peaks or troughs in the VAR-Plot
+\end{conditions}
+
+\noindent This calculation was is done using all peak and trough pairs and its results are shown in Table \ref{tb_ne_excitation_energies}.
+%
+\begin{table}[H]
+    \centering
+    \caption{Calculated excitation energies of Neon from all measured peak and trough pairs.}
+    \label{tb_ne_excitation_energies}
+    \begin{tabular}{
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |}
+        \hline
+         & \textbf{Peaks 1,2} & \textbf{Peaks 2,3} & \textbf{Troughs 1,2} & \textbf{Troughs 2,3}
+        \\
+        \hline
+        \textbf{\(\Delta\)E [eV]} & 17.6 & 19.4 & 19.7 & 16.3
+        \\
+        \hline
+    \end{tabular}
+\end{table}
+%
+\noindent Using Equation \ref{eq_arithmetic_mean}, the arithmetic mean of these values is calculated. The result of this is the determined activation energy.
+%
+\begin{equation} \label{eq_arithmetic_mean}
+    \overline{x} = \frac{1}{n} \cdot \sum_{i=1}^{n} x_i
+\end{equation}
+\begin{conditions}
+    \overline{x} & Arithmetic mean of taken measurements \\
+    n & Number of measurements \\
+    x_i & Value of measurement i
+\end{conditions}
+
+In order to calculate the total error of this result, two different error sources need to be evaluated.
+
+Firstly, the uncertainty in voltage readings, resulting from the limited resolution of the used plot paper, needs to be taken into account. This is simply double the lowest measurable voltage (double since the voltage difference is calculated from two single measurements). This in turn is equal to the resolution of the paper (1~mm) multiplied by the reduction factor R.
+%
+\begin{equation} \label{eq_resolution_uncertainty}
+    u_{res} = 2 \cdot R \cdot r
+\end{equation}
+\begin{conditions}
+    u_{res} & Uncertainty resulting from measurement resolution \\
+    R & Reduction factor \\
+    r & Resolution of the paper
+\end{conditions}
+
+\noindent Secondly, the random uncertainty of the taken measurements can be calculated as the standard error of the mean:
+%
+\begin{equation} \label{eq_random_uncertainty}
+    u_{sem} = \frac{1}{\sqrt{n}} \cdot \sqrt{\frac{1}{n-1} \cdot \sum_{i=1}^{n} (x_i - \overline{x})^2}
+\end{equation}
+\begin{conditions}
+    u_{sem} & Standard error of the mean \\
+    n & Number of measurements \\
+    x_i & Value of measurement i \\
+    \overline{x} & Arithmetic mean of measurements
+\end{conditions}
+
+\noindent From these two values, the total uncertainty can then be calculated:
+%
+\begin{equation} \label{eq_total_uncertainty}
+    u = \sqrt{u_{res}^2 + u_{sem}^2}
+\end{equation}
+\begin{conditions}
+    u & Total uncertainty \\
+\end{conditions}
+
+\noindent Using the equations above, the excitation energy of Neon \(\adif E_{Ne}\) is determined as \textbf{(18.26~\(\pm\)~1.01)~eV}.
 
 \end{document}
