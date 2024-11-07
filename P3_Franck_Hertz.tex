@@ -15,6 +15,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[tableposition=top, justification=centering]{caption}
+\usepackage{multirow}
 
 \usepackage{derivative}
 
@@ -75,10 +76,10 @@ In order to start the experiment, the Neon-filled tube was connected to the Fran
        & \textbf{Ne\newline initial} & \textbf{Ne\newline tuned} & \textbf{Hg, 150~°C\newline initial} & \textbf{Hg, 150~°C\newline tuned} & \textbf{Hg, 180~°C\newline initial} & \textbf{Hg, 180~°C\newline tuned}
       \\
       \hline
-      \textbf{U\textsubscript{1} [V]} & a & 0.54 & a & 5.00 & a & 5.31
+      \textbf{U\textsubscript{1} [V]} &  & 0.54 & 5.00 & 5.00 & 5.00 & 5.31
       \\
       \hline
-      \textbf{U\textsubscript{3} [V]} & a & 8.98 & a & 4.08 & a & 0.68
+      \textbf{U\textsubscript{3} [V]} & 7.00 & 8.98 & 1.50 & 4.08 & 1.50 & 0.68
       \\
       \hline
   \end{tabular}
@@ -89,7 +90,7 @@ In order to start the experiment, the Neon-filled tube was connected to the Fran
 Following the experiments using the Neon-tube, the Mercury-tube was connected instead and heated up by setting the desired temperature on the control device. The experimental steps described above were then repeated at tube temperatures of 150 and 180~°C.
 
 \newpage
-\section{Results and Discussion}
+\section{Results}
 \subsection{Determination of Excitation Energy for Neon}
 Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz curves of Neon in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_ne_peaks_troughs}.
 %
@@ -140,7 +141,7 @@ Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz cur
 
 \noindent Using the values of Peaks 1 and 3 in Table \ref{tb_ne_peaks_troughs}, a reduction factor of 0.3083 is determined. Since, during the CAL-measurement, the X/Y-plotter was set to record one volt of input voltage as one millimeter on the paper, the distance of two neighboring peaks or troughs on the VAR-graph only needs to be multiplied with the reduction factor in order to calculate the excitation energy of the studied element in electron-volts (eV):
 %
-\begin{equation}
+\begin{equation} \label{eq_excitation_energy}
     \adif E = (X_{var,n} - X_{var,n-1}) \cdot R
 \end{equation}
 \begin{conditions}
@@ -161,16 +162,16 @@ Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz cur
          & \textbf{\(\Delta\)E [eV]}
         \\
         \hline
-        \textbf{Peaks 1,2} & 17.6
+        \textbf{Peaks 1,2} & 17.58
         \\
         \hline
-        \textbf{Peaks 2,3} & 19.4
+        \textbf{Peaks 2,3} & 19.43
         \\
         \hline
-        \textbf{Troughs 1,2} & 19.7
+        \textbf{Troughs 1,2} & 19.73
         \\
         \hline
-        \textbf{Troughs 2,3} & 16.3
+        \textbf{Troughs 2,3} & 16.34
         \\
         \hline
     \end{tabular}
@@ -187,7 +188,7 @@ Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz cur
     x_i & Value of measurement i
 \end{conditions}
 
-In order to calculate the total error of this result, two different error sources need to be evaluated.
+\noindent In order to calculate the total error of this result, two different error sources need to be evaluated.
 
 Firstly, the uncertainty in voltage readings, resulting from the limited resolution of the used plot paper, needs to be taken into account. This is simply double the lowest measurable voltage (double since the voltage difference is calculated from two single measurements). This in turn is equal to the resolution of the paper (1~mm) multiplied by the reduction factor R.
 %
@@ -224,7 +225,7 @@ Firstly, the uncertainty in voltage readings, resulting from the limited resolut
 \noindent Using the equations above, the excitation energy of Neon \(\adif E_{Ne}\) is determined as \textbf{(18.26~\(\pm\)~1.01)~eV}.
 
 \newpage
-\subsection{Determination of Excitation Energy for Mercury}
+\subsection{Determination of Excitation Energy for Mercury} \label{ssec_neon_results}
 Figures \ref{fig_hg_150_CAL} through \ref{fig_hg_180_VAR} show the recorded Franck-Hertz curves of Mercury in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_hg_peaks_troughs}.
 \begin{table}[H]
     \centering
@@ -277,6 +278,86 @@ Figures \ref{fig_hg_150_CAL} through \ref{fig_hg_180_VAR} show the recorded Fran
     \end{tabular}
 \end{table}
 %
-\noindent Using Equation \ref{eq_reduction_factor}, reduction factors for both temperatures were calculated. For 150 and 180~°C, these are 0.1232 and 0.1333, respectively.
+\noindent Using Equation \ref{eq_reduction_factor}, reduction factors for both temperatures were calculated using the first and last peaks. For 150 and 180~°C, these are 0.1232 and 0.1333, respectively. Just like in the Neon experiments, a scale of one volt per millimeter was used and as such the reduced VAR-values can be directly read as Voltages.
+
+Using Equation \ref{eq_excitation_energy}, the excitation energies of each peak and trough pair was calculated and recorded in Table \ref{tb_hg_excitation_energies}
+%
+\begin{table}[H]
+    \centering
+    \caption{Calculated excitation energies of Mercury from all measured peak and trough pairs.}
+    \label{tb_hg_excitation_energies}
+    \begin{tabular}{
+      |c
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |>{\centering\arraybackslash}m{0.15\textwidth}
+      |}
+        \hline
+         & & \textbf{\(\Delta\)E [eV]}
+        \\
+        \hline
+        \multirow{9}{*}{\rotatebox[origin=c]{90}{\textbf{150~°C}}} & \textbf{Peaks 1,2} & 4.56
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 2,3} & 5.05
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 3,4} & 5.05
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 4,5} & 5.30
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 5,6} & 6.04
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 1,2} & 4.68
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 2,3} & 4.81
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 3,4} & 4.93
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 4,5} & 5.05
+        \\
+        \hline
+        \multirow{9}{*}{\rotatebox[origin=c]{90}{\textbf{180~°C}}} & \textbf{Peaks 1,2} & 5.07
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 2,3} & 5.20
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 3,4} & 5.07
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 4,5} & 5.47
+        \\
+        \cline{2-3}
+         & \textbf{Peaks 5,6} & 5.20
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 1,2} & 5.33
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 2,3} & 5.33
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 3,4} & 5.33
+        \\
+        \cline{2-3}
+         & \textbf{Troughs 4,5} & 5.33
+        \\
+        \hline
+    \end{tabular}
+\end{table}
+%
+\noindent Using Equations \ref{eq_arithmetic_mean}\textendash\ref{eq_total_uncertainty}, the arithmetic means as well as the uncertainties of the excitation energies at 150 and 180~°C are calculated.
+
+The thusly calculated excitation energies are determined as \textbf{(5.05~\(\pm\)~0.29)~eV} at 150~°C and \textbf{(5.26~\(\pm\)~0.27)~eV} at 180~°C.
+
+\section{Disucssion of Results}
+
+\section{Conclusion}
 
 \end{document}
