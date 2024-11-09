@@ -7,8 +7,8 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 
-\usepackage[backend=biber,style=verbose-ibid,sorting=ynt]{biblatex}
-\addbibresource{K4.bib}
+\usepackage[backend=biber,style=chem-acs,sorting=ynt]{biblatex}
+\addbibresource{P3.bib}
 
 \usepackage[breaklinks]{hyperref}
 
@@ -93,6 +93,20 @@ Following the experiments using the Neon-tube, the Mercury-tube was connected in
 \section{Results}
 \subsection{Determination of Excitation Energy for Neon}
 Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz curves of Neon in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_ne_peaks_troughs}.
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Ne_CAL.png}
+    \caption{}
+    \label{fig_ne_CAL}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Ne_VAR.png}
+    \caption{}
+    \label{fig_ne_VAR}
+\end{figure}
 %
 \begin{table}[H]
   \centering
@@ -224,7 +238,6 @@ Firstly, the uncertainty in voltage readings, resulting from the limited resolut
 
 \noindent Using the equations above, the excitation energy of Neon \(\adif E_{Ne}\) is determined as \textbf{(18.26~\(\pm\)~1.01)~eV}.
 
-\newpage
 \subsection{Determination of Excitation Energy for Mercury} \label{ssec_neon_results}
 Figures \ref{fig_hg_150_CAL} through \ref{fig_hg_180_VAR} show the recorded Franck-Hertz curves of Mercury in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_hg_peaks_troughs}.
 \begin{table}[H]
@@ -356,8 +369,17 @@ Using Equation \ref{eq_excitation_energy}, the excitation energies of each peak 
 
 The thusly calculated excitation energies are determined as \textbf{(5.05~\(\pm\)~0.29)~eV} at 150~°C and \textbf{(5.26~\(\pm\)~0.27)~eV} at 180~°C.
 
-\section{Disucssion of Results}
+\section{Disucssion}
+The determined excitation energy of Neon at (18.26~\(\pm\)~1.01)~eV differs significantly from the literature value for the lowest excitation of Neon at 16.62~eV \autocite{Ne_Energies}. This is due to the fact that, after acceleration of an electron to a kinetic energy high enough to inelastically collide and cause an excitation, the electron continues to travel for the length of its mean free path, before doing so. During this time, it is further accelerated by the applied electric field and, upon eventual collision, causes an excitation to a higher energy state than the cited value \autocite{New_Features_of_FH_Exp}
+
+By instead comparing to the energy of higher excitation states, one can see that the excitation energy of an electron from a 2p to a 3p orbital lies well within the range of uncertainty of the determined energy value \autocite{Ne_Energies}.
+
+Looking at the determined excitation energies for mercury of (5.05~\(\pm\)~0.29)~eV at 150~°C and (5.26~\(\pm\)~0.27)~eV at 180~°C, one can similarly see that these are higher than the lowest excitation of Hg at 4.67~eV, while more closely matching the higher excitation levels at 4.89 and 5.46~eV\autocite{Hg_Energies}. The three discussed values for mercury all represent an excitation from a 6s to a 6p orbital - they differ however in spin and angular momentum quantum numbers.
+
+
 
 \section{Conclusion}
 
+\newpage
+\printbibliography
 \end{document}
