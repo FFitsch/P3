@@ -1,13 +1,13 @@
 \documentclass[titlepage]{article}
 \usepackage{fancyhdr}
 \usepackage[margin=1.2in]{geometry}
-\usepackage{appendix}
+\usepackage[title]{appendix}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{csquotes}
 
-\usepackage[backend=biber,style=chem-acs,sorting=ynt]{biblatex}
+\usepackage[backend=biber,style=chem-acs,sorting=ynt,url=true,doi=true]{biblatex}
 \addbibresource{P3.bib}
 
 \usepackage[breaklinks]{hyperref}
@@ -54,10 +54,10 @@
 
 \newpage
 \section{Objective}
-In this assignment, the Franck-Hertz experiment is carried out using a Neon- as well as a Mercury-filled tube. While the Neon-tube is run at room temperature, the Mercury tube is run at Temperatures of 150 as well as 180~°C. The available experimental parameters (suction voltage as well as retarding voltage) are tuned in order to attain several clear maxima, before measurements are taken in order to determine the excitation energies of the studied elements.
+In this assignment, the Franck-Hertz experiment is carried out using a neon- as well as a nercury-filled tube. While the neon-tube is run at room temperature, the ,mercury tube is run at Temperatures of 150 as well as 180~°C. The available experimental parameters (suction voltage as well as retarding voltage) are tuned in order to attain several clear maxima, before measurements are taken in order to determine the excitation energies of the studied elements.
 
 \section{Experiment}
-In order to start the experiment, the Neon-filled tube was connected to the Franck-Hertz control device. Using its various knobs, the voltages U\textsubscript{1} (suction current between cathode and first grid) and U\textsubscript{3} (retarding current between the anode and second grid) were set to the initial values presented in Table \ref{tb_operational_parameters}. These values were then tuned by setting the control device to quickly sweep the entire available range for U\textsubscript{2} (accelerating voltage between the two grids), in order to get clear and numerous peaks.
+In order to start the experiment, the neon-filled tube was connected to the Franck-Hertz control device. Using its various knobs, the voltages U\textsubscript{1} (suction current between cathode and first grid) and U\textsubscript{3} (retarding current between the anode and second grid) were set to the initial values presented in Table \ref{tb_operational_parameters}. These values were then tuned by setting the control device to quickly sweep the entire available range for U\textsubscript{2} (accelerating voltage between the two grids), in order to get clear and numerous peaks.
 %
 \begin{table}[H]
   \centering
@@ -76,7 +76,7 @@ In order to start the experiment, the Neon-filled tube was connected to the Fran
        & \textbf{Ne\newline initial} & \textbf{Ne\newline tuned} & \textbf{Hg, 150~°C\newline initial} & \textbf{Hg, 150~°C\newline tuned} & \textbf{Hg, 180~°C\newline initial} & \textbf{Hg, 180~°C\newline tuned}
       \\
       \hline
-      \textbf{U\textsubscript{1} [V]} &  & 0.54 & 5.00 & 5.00 & 5.00 & 5.31
+      \textbf{U\textsubscript{1} [V]} & 0.50 & 0.54 & 5.00 & 5.00 & 5.00 & 5.31
       \\
       \hline
       \textbf{U\textsubscript{3} [V]} & 7.00 & 8.98 & 1.50 & 4.08 & 1.50 & 0.68
@@ -87,24 +87,24 @@ In order to start the experiment, the Neon-filled tube was connected to the Fran
 %
 \noindent After the ideal parameters were determined, an X/Y-plotter was connected to the control device, with U\textsubscript{2} recorded on the x-axis and the anode current being recorded on the y-axis. Measurements were then plotted to paper using the control device's sweep-function (sweeping over the available range of U\textsubscript{2} values), both in the plotter's CAL-mode, in which one unit on the paper corresponds to a fixed input current, as well as the VAR-mode, in which the was manually scaled to best fit the paper.
 
-Following the experiments using the Neon-tube, the Mercury-tube was connected instead and heated up by setting the desired temperature on the control device. The experimental steps described above were then repeated at tube temperatures of 150 and 180~°C.
+Following the experiments using the neon tube, the mercury tube was connected instead and heated up by setting the desired temperature on the control device. The experimental steps described above were then repeated at tube temperatures of 150 and 180~°C.
 
 \newpage
 \section{Results}
 \subsection{Determination of Excitation Energy for Neon}
-Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz curves of Neon in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_ne_peaks_troughs}.
+Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz curves of neon in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_ne_peaks_troughs}.
 %
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Figures/Ne_CAL.png}
-    \caption{}
+    \includegraphics[width=0.45\textwidth]{Figures/Ne_CAL.png}
+    \caption{Recorded Franck-Hertz curve of neon using the X/Y-plotter's CAL-mode at a horizontal resolution of 1~V/mm.}
     \label{fig_ne_CAL}
 \end{figure}
 %
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figures/Ne_VAR.png}
-    \caption{}
+    \caption{Recorded Franck-Hertz curve of neon using the X/Y-plotter's VAR-mode.}
     \label{fig_ne_VAR}
 \end{figure}
 %
@@ -166,7 +166,7 @@ Figures \ref{fig_ne_CAL} and \ref{fig_ne_VAR} show the recorded Franck-Hertz cur
 %
 \begin{table}[H]
     \centering
-    \caption{Calculated excitation energies of Neon from all measured peak and trough pairs.}
+    \caption{Calculated excitation energies of neon from all measured peak and trough pairs.}
     \label{tb_ne_excitation_energies}
     \begin{tabular}{
       |>{\centering\arraybackslash}m{0.15\textwidth}
@@ -236,10 +236,39 @@ Firstly, the uncertainty in voltage readings, resulting from the limited resolut
     u & Total uncertainty \\
 \end{conditions}
 
-\noindent Using the equations above, the excitation energy of Neon \(\adif E_{Ne}\) is determined as \textbf{(18.26~\(\pm\)~1.01)~eV}.
+\noindent Using the equations above, the excitation energy of neon \(\adif E_{Ne}\) is determined as \textbf{(18.26~\(\pm\)~1.01)~eV}.
 
 \subsection{Determination of Excitation Energy for Mercury} \label{ssec_neon_results}
-Figures \ref{fig_hg_150_CAL} through \ref{fig_hg_180_VAR} show the recorded Franck-Hertz curves of Mercury in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_hg_peaks_troughs}.
+Figures \ref{fig_hg_150_CAL} through \ref{fig_hg_180_VAR} show the recorded Franck-Hertz curves of mercury in the CAL- and VAR-modes of the X/Y-plotter respectively. With the starting point of the plot set as (0,0), the x-values of the peaks and troughs of the curves were measured and recorded in Table \ref{tb_hg_peaks_troughs}.
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Figures/Hg_150_CAL.png}
+    \caption{Recorded Franck-Hertz curve of mercury at 150~°C using the X/Y-plotter's CAL-mode at a horizontal resolution of 1~V/mm.}
+    \label{fig_hg_150_CAL}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Hg_150_VAR.png}
+    \caption{Recorded Franck-Hertz curve of mercury at 150~°C using the X/Y-plotter's VAR-mode.}
+    \label{fig_hg_150_VAR}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Hg_180_CAL.png}
+    \caption{Recorded Franck-Hertz curves of neon using the X/Y-plotter's CAL-mode at a horizontal resolution of 1~V/mm. Due to erroneous peaks occuring during some measurements, multiple curves were recorded.}
+    \label{fig_hg_180_CAL}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Hg_180_VAR.png}
+    \caption{Recorded Franck-Hertz curve of neon using the X/Y-plotter's VAR-mode.}
+    \label{fig_hg_180_VAR}
+\end{figure}
+%
 \begin{table}[H]
     \centering
     \caption{X-values of measured peaks and throughs in the CAL- and VAR-mode Hg-plots at both 150~°C and 180~°C}
@@ -291,13 +320,13 @@ Figures \ref{fig_hg_150_CAL} through \ref{fig_hg_180_VAR} show the recorded Fran
     \end{tabular}
 \end{table}
 %
-\noindent Using Equation \ref{eq_reduction_factor}, reduction factors for both temperatures were calculated using the first and last peaks. For 150 and 180~°C, these are 0.1232 and 0.1333, respectively. Just like in the Neon experiments, a scale of one volt per millimeter was used and as such the reduced VAR-values can be directly read as Voltages.
+\noindent Using Equation \ref{eq_reduction_factor}, reduction factors for both temperatures were calculated using the first and last peaks. For 150 and 180~°C, these are 0.1232 and 0.1333, respectively. Just like in the neon experiments, a scale of one volt per millimeter was used and as such the reduced VAR-values can be directly read as Voltages.
 
 Using Equation \ref{eq_excitation_energy}, the excitation energies of each peak and trough pair was calculated and recorded in Table \ref{tb_hg_excitation_energies}
 %
 \begin{table}[H]
     \centering
-    \caption{Calculated excitation energies of Mercury from all measured peak and trough pairs.}
+    \caption{Calculated excitation energies of mercury from all measured peak and trough pairs.}
     \label{tb_hg_excitation_energies}
     \begin{tabular}{
       |c
@@ -369,17 +398,39 @@ Using Equation \ref{eq_excitation_energy}, the excitation energies of each peak 
 
 The thusly calculated excitation energies are determined as \textbf{(5.05~\(\pm\)~0.29)~eV} at 150~°C and \textbf{(5.26~\(\pm\)~0.27)~eV} at 180~°C.
 
+\newpage
 \section{Disucssion}
-The determined excitation energy of Neon at (18.26~\(\pm\)~1.01)~eV differs significantly from the literature value for the lowest excitation of Neon at 16.62~eV \autocite{Ne_Energies}. This is due to the fact that, after acceleration of an electron to a kinetic energy high enough to inelastically collide and cause an excitation, the electron continues to travel for the length of its mean free path, before doing so. During this time, it is further accelerated by the applied electric field and, upon eventual collision, causes an excitation to a higher energy state than the cited value \autocite{New_Features_of_FH_Exp}
+The determined excitation energy of neon at (18.26~\(\pm\)~1.01)~eV differs significantly from the literature value for the lowest excitation of neon at 16.62~eV \autocite{Ne_Energies}. This is due to the fact that, after acceleration of an electron to a kinetic energy high enough to inelastically collide and cause an excitation, the electron continues to travel for the length of its mean free path, before doing so. During this time, it is further accelerated by the applied electric field and, upon eventual collision, causes an excitation to a higher energy state than the cited value \autocite{New_Features_of_FH_Exp}.
 
 By instead comparing to the energy of higher excitation states, one can see that the excitation energy of an electron from a 2p to a 3p orbital lies well within the range of uncertainty of the determined energy value \autocite{Ne_Energies}.
 
 Looking at the determined excitation energies for mercury of (5.05~\(\pm\)~0.29)~eV at 150~°C and (5.26~\(\pm\)~0.27)~eV at 180~°C, one can similarly see that these are higher than the lowest excitation of Hg at 4.67~eV, while more closely matching the higher excitation levels at 4.89 and 5.46~eV\autocite{Hg_Energies}. The three discussed values for mercury all represent an excitation from a 6s to a 6p orbital - they differ however in spin and angular momentum quantum numbers.
 
+Comparing the determined excitation energies at different temperatures, a higher excitation energy is observed at 180~°C than at 150~°C. This contradicts with observations in literature, where a decrease in peak/trough distance (and thus determined excitation energy) is observed with an increase in temperature, due to the electrons' shorter mean free path at higher temperatures \autocite{New_Features_of_FH_Exp}.
 
+Another expected trend for all measurements is an increasing peak/trough distance with an increase in acceleration voltage U\textsubscript{2}. This, again, is due to the additional travel of electrons over the mean free path after reaching sufficient energy to cause an excitation. For each excitation, this distance is effectively 'lost', before an electron can again be accelerated in preparation for another excitation - as such, with more inelastic collisions, the effective tube length, over which the supplied voltage has to accelerate the electrons, is shortened, meaning a larger potential is required \autocite{New_Features_of_FH_Exp}. While with neon - presumably due to the low amount of data points - this phenomenon can not be seen consistently (while between the two evaluted peak pairs, an increase in peak distance is visible, the opposite is seen for the observed troughs), three of four measurement series of mercury follow the expected trend (while the troughs in the Franck-Hertz curve at 180~°C show a static trough distance). The linear regression curves of peak/trough distance with n (peak number from left to right) are shown in Appendix \ref{sec_apx_lin_reg}.
 
 \section{Conclusion}
+Through application of the Franck-Hertz experiment, the quantum nature of atoms was observed. The functional parameters of the experiment were tuned in order to achieve clear Franck-Hertz curves of neon and mercury, from which excitation energies were determined. Additional trends and featuers of the experiment, such as temperature- and acceleration-voltage-dependency of the observed energy differences were discussed using relevant literature and compared to the experimental values.
 
 \newpage
 \printbibliography
+
+\newpage
+\begin{appendices}
+\section{Linear Regression of Peak/Trough Distance against Peak Number} \label{sec_apx_lin_reg}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/Hg_150_Lin_Reg.png}
+    \caption{Linear regression curves of peak (blue) and trough (orange) distance in eV against peak number n for mercury at 150~°C.}
+    \label{fig_hg_150_Lin_Reg}
+\end{figure}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/Hg_180_Lin_Reg.png}
+    \caption{Linear regression curves of peak (blue) and trough (orange) distance in eV against peak number n for mercury at 180~°C.}
+    \label{fig_hg_180_Lin_Reg}
+\end{figure}
+\end{appendices}
 \end{document}
