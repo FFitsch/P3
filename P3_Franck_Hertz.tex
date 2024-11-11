@@ -57,7 +57,36 @@
 In this assignment, the Franck-Hertz experiment is carried out using a neon- as well as a nercury-filled tube. While the neon-tube is run at room temperature, the ,mercury tube is run at Temperatures of 150 as well as 180~°C. The available experimental parameters (suction voltage as well as retarding voltage) are tuned in order to attain several clear maxima and minima in the Franck-Hertz curve, before measurements are taken in order to determine the excitation energies of the studied elements.
 
 \section{Experiment}
-In order to start the experiment, the neon-filled tube was connected to the Franck-Hertz control device. Using its various knobs, the voltages U\textsubscript{1} (suction current between cathode and first grid) and U\textsubscript{3} (retarding current between the anode and second grid) were set to the initial values presented in Table \ref{tb_operational_parameters}. These values were then tuned by setting the control device to quickly sweep the entire available range for U\textsubscript{2} (accelerating voltage between the two grids), while an oscilloscope was used to view the Franck-Hertz curve, in order to get clear and numerous peaks and troughs.
+\subsection{Theory}
+The Franck-Hertz experiment is used to show the quantization of electronic states in atoms. The core piece of its experimental setup is a sealed tube, which is filled with an atomic gas (such as neon or vaporized mercury). Along its length there are four components:
+%
+\begin{enumerate}
+    \itemsep0em
+    \item A cathode (C), which can be heated by applying a current across it.
+    \item Two metal wire nets (N\textsubscript{1} and N\textsubscript{2}).
+    \item An anode (A).
+\end{enumerate}
+
+By heating up the cathode K and applying a potential (suction voltage U\textsubscript{1}) between it and N\textsubscript{1}, electrons are emitted from K and drawn towards N\textsubscript{1}. Another potential is applied between N\textsubscript{1} and N\textsubscript{2}. This is the accelerating voltage U\textsubscript{2}, which accelerates the previously emitted electrons over a fixed distance between the nets. A third potential (retarding voltage U\textsubscript{3}) is applied in opposite polarity to U\textsubscript{1} and U\textsubscript{2} between N\textsubscript{2} and A, which decelerates the electrons, only allowing those with a sufficient kinetic energy to reach A.
+
+During their travel between N\textsubscript{1} and N\textsubscript{2}, electrons of sufficient kinetic energy are able to inelastically collide with the atoms filling the tube, causing excitation of one of the atom's valence electrons into a higher electronic state. This lowers the free electrons' kinetic energy by the value of the excitation energy \(\Delta\)E of the respective element.
+
+By recording the anode current I\textsubscript{A} while continuously increasing U\textsubscript{2}, Franck-Hertz curves are recorded, in which the following phenomena can be observed:
+
+\begin{enumerate}
+    \itemsep0em
+    \item At first, almost no electrons have the required kinetic energy to pass E\textsubscript{3} and reach A, which results in a low I\textsubscript{A}.
+    \item As U\textsubscript{2} is raised, more electrons reach A, increasing I\textsubscript{A}.
+    \item Once electrons start gaining sufficient kinetic energy between N\textsubscript{1} and N\textsubscript{2}, they cause excitations of the atoms in the tube. Thus they lose kinetic energy, and I\textsubscript{A} decreases.
+    \item With even higher U\textsubscript{2}, electrons are able to gain enough kinetic energy after causing an excitation to reach the anode and thus I\textsubscript{A} increases once more.
+    \item Eventually, electrons are able to excite a second atom before reaching N\textsubscript{2}, which results in a decrease of I\textsubscript{A}.
+    \item The previous steps repeat, causing an oscillation of I\textsubscript{A}.
+\end{enumerate}
+
+By measuring the difference in U\textsubscript{2} between two minima or maxima of I\textsubscript{A} in the recorded curve, the excitation energy \(\Delta\)E of the atoms within the tube can be determined. This proves the quantization of electronic states within atoms, since, during every excitation caused by the electrons, the same quantized amount of energy (the energy difference between the ground state and the first excited state) is given off to the atom.
+
+\subsection{Practical Realization}
+In order to start the experiment, the neon-filled tube was connected to the Franck-Hertz control device. Using its various knobs, the voltages U\textsubscript{1} (suction voltage between cathode and first grid) and U\textsubscript{3} (retarding voltage between the anode and second grid) were set to the initial values presented in Table \ref{tb_operational_parameters}. These values were then tuned by setting the control device to quickly sweep the entire available range for U\textsubscript{2} (accelerating voltage between the two grids), while an oscilloscope was used to view the Franck-Hertz curve, in order to get clear and numerous peaks and troughs.
 %
 \begin{table}[H]
   \centering
